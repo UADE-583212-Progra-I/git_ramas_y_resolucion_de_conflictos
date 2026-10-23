@@ -13,7 +13,8 @@ def validar_nombre(nombre:str):
     """
     Valida que nombre sea no nulo y que solo caracteres"""
     # Completar
-    return True
+    patron_nombre = r"[a-ZA-Z]+"
+    return bool(re.fullmatch(patron_nombre, nombre.strip())
 
 def validar_email(email:str):
     """
